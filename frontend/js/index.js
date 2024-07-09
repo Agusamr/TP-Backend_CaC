@@ -86,6 +86,7 @@ createDiv() {
                 <li>tamaño: ${this.tamanio}</li>
                 <li>precio: ${this.precio}</li>
             </ul>
+            
         </div>
     `;
 
@@ -112,21 +113,37 @@ fetch(URL_API_BASE)
     })
     .catch(error => console.error(error));
 });
-//         let btn = document.createElement("button")
-//         btn.innerText = `Borrar Pizza ${this.nombre}`
-//         btn.addEventListener("click", ()=>{
-//             fetch(`${this.url}${this.id}/`,{method:"DELETE"})
-//             .then(this.removeDisplay())
-//             .catch(error => console.log({error}))
-//         })
-//         this.div.appendChild(btn)
-//         return this.div
 
-//     }
-  
-//     removeDisplay() {
-//         this.div.remove();
-//     }
-// }
+const btnDelete = document.getElementById("btn-delete");
+
+btnGet.addEventListener("click", () => {
+    fetch(URL_API_BASE)
+        .then(res => res.json())
+        .then(data => {
+            let fragment = document.createDocumentFragment();
+
+            data.forEach(pizzaData => {
+                let pizza = new Pizza(pizzaData);
+                let pizzaDiv = pizza.createDiv();
+                fragment.appendChild(pizzaDiv);
+            });
+
+            let pizzasContainer = document.getElementById("pizzas");
+            pizzasContainer.innerHTML = ''; // Limpiar antes de agregar
+            pizzasContainer.appendChild(fragment); // Agregar todos los elementos al contenedor
+        })
+        .catch(error => console.error(error));
+});
+
+btnDelete.addEventListener("click", () => {
+    let pizzasContainer = document.getElementById("pizzas");
+    let lastPizza = pizzasContainer.lastChild;
+
+    if (lastPizza) {
+        pizzasContainer.removeChild(lastPizza);
+    } else {
+        console.log("No hay elementos para eliminar.");
+    }
+});
 
 
