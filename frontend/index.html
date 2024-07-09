@@ -7,5 +7,30 @@
 </head>
 <body>
     <h1>Las pizzas mais deciosas do mundo enteiro</h1>
+    <hr>
+    <section id="crear_pizza">
+        <form id="crear_pizza_form">
+            <label> Ingresar el nombre de la pizza: </label>
+            <input type="text" name="nombre">
+            <br>
+            <label> Ingresar tamaño de la pizza: </label>
+            <input type="text" name="tamanio">
+            <br>
+            <label> Ingresar el precio de la pizza: </label>
+            <input type="number " name="precio">
+            <br>
+            
+            <button id="btn-post" type="submit"> Crear pizza</button>
+        </form>
+    </section>
+    <hr>
+    <section id="mostrar_pizzas">
+        <button id="btn-get">Obtener Pizzas</button>
+        <div id="pizzas">
+
+
+        </div>
+    </section>
 </body>
+<script scr="index.js"></script>
 </html>
