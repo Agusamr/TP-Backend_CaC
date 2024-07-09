@@ -13,7 +13,15 @@ btn.addEventListener(
         .catch(error => console.log({error}))
     }
 )
-
+const btnGet = document.getElementById("btn-get")
+btnGet.addEventListener(
+    "click", () => {
+        fetch(URL_API_BASE)
+        .then(res => res.json())
+        .then(data =>console.log(data))
+        .catch(error => console.log({error}))
+    }
+)
 // class Pizza{
 //     constructor({nombre,tamanio,precio}){
         
