@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Poller+One&display=swap');
+
+--root{
+    /* PALETA DE COLORES */
+    --bg-div-color:#700b97;
+    --bg-div-color-sec:#8e05c2;
+    --bg-div-color-op: #ffae00;
+    --bg-div-color-ch: #ff3300;
+}
+
+.navbar ul{
+    list-style-type: none;
+    background-color: #ff3300;
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+    text-align: center;
+
+}
+
+.navbar a {
+    color: black;
+    text-decoration: solid;
+    font-weight: bolder;
+    padding: 40px 40px ;
+    display: block;
+    text-align: center;
+    overflow: hidden;
+    font-family: "Poller One";
+    font-size: 18px;
+    text-align: center;
+}
+
+.navbar a:hover{
+    background-color: #eb860b;   
+}
+
+.navbar li{
+    display: inline-block;
+}
+
+body {
+    background-color: #ffae00;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    padding: 0 1.5em;
+}
+
+.form-container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 1.5em;
+}
+
+h1, h2 {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.box {
+    background-color: aliceblue;
+    color: #ffae00;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    border-radius: 30px;
+    border: 1px solid white;
+    padding: 1em;
+    margin: 1em auto;
+    text-align: center;
+}
+
+.box p {
+    margin-bottom: 1em;
+}
+
+.box button {
+    background-color: #f8e9c2;
+    color: #ffae00;
+    font-weight: 700;
+    padding: 0.7em 1.5em;
+    border: 0.5px solid #ffae00;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.box button:hover {
+    background-color: #ffae00;
+    color: #f8e9c2;
+}
+
+form {
+    display: grid;
+    gap: 1em;
+}
+
+.agrupar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+}
+
+form input, 
+form button, 
+form textarea {
+    color: #ffae00;
+    width: 100%;
+    padding: 0.7em;
+    border: 0.5px solid #ffae00;
+    border-radius: 10px;
+    background: none;
+}
+
+form button {
+    background-color: #f8e9c2;
+    font-weight: 700;
+    padding: 1em;
+}
+
+form button:hover {
+    background-color: #ffae00;
+    color: #f8e9c2;
+}
+
+.formulario {
+    box-shadow: 0 0 20px 0 rgba(255, 174, 0, 0.2);
+}
+
+.formulario > * {
+    padding: 1.5em;
+}
+
+.centro{
+    background-color: #fcf9f3;
+    border: 1px solid #ffae00;
+    border-radius: 10px;
+    padding: 1.5em;
+}
+
+.checkbox{
+    display: flex;
+    align-items: center;
+}
+
+.checkbox input{
+    margin-right: 0.5em;
+}
+
+
+/*etiqueta main como excepcion*/
+/* body{
+    margin: 0;
+    background-color: #666;
+    height: 250svh;
+    border: 2px solid white;
+}
+
+/*dentro del body, un conjunto de elementos div
+que comparten (x el simbolo >) un estilo particular 
+(LUEGO SE MOVIO DE BODY A MAIN)
+
+body > div {
+    height: 500px;
+    aspect-ratio: 1;
+    border-radius: 30px;
+    border: 1px solid white;
+
+} */
