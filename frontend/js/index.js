@@ -1,7 +1,7 @@
 const form = document.getElementById("crear_pizza_form")
 const btn = document.getElementById("btn-post")
 
-//const URL_API_BASE = "http://127.0.0.1:5000/api/pelicula/"
+
 const URL_API_BASE = "http://127.0.0.1:8000/lista-de-pizzas/pizza/"
 
 
@@ -22,7 +22,7 @@ class Pizza{
         this.nombre = nombre
         this.tamanio = tamanio
         this.precio = precio
-     //   this.url = "http://127.0.0.1:5000/api/pelicula/"        
+           
         this.url = "http://127.0.0.1:8000/lista-de-pizzas/pizza/"
     }
 
@@ -44,7 +44,7 @@ class Pizza{
         let btn = document.createElement("button")
         btn.innerText = `Borrar Pizza ${this.nombre}`
         btn.addEventListener("click", ()=>{
-            // fetch(`${this.url}${this.id}/`,{method:"DELETE"})
+            
             fetch(`http://127.0.0.1:8000/lista-de-pizzas/pizza/${this.id}/`, {
                 method: 'DELETE'
             })
